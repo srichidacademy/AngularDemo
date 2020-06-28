@@ -1,0 +1,28 @@
+<p>Produts</p>
+<table>
+    <tr>
+        <th>
+Product Name
+        </th>
+        <th>
+          Category  
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price(Rs.)
+        </th>
+        <th>
+         Availability
+        </th>
+    </tr>
+<tr *ngFor="let product of products">
+    <td>{{product.ProductName}}</td>
+    <td>{{product.Category}}</td>
+    <td>{{product.Description}}</td>
+    <td>{{product.Price}}</td>
+    <td>{{product.Availability}}</td>
+</tr>
+
+</table>
