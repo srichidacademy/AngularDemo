@@ -1,28 +1,43 @@
-<p>Produts</p>
-<table>
-    <tr>
-        <th>
-Product Name
-        </th>
-        <th>
-          Category  
-        </th>
-        <th>
-            Description
-        </th>
-        <th>
-            Price(Rs.)
-        </th>
-        <th>
-         Availability
-        </th>
-    </tr>
-<tr *ngFor="let product of products">
-    <td>{{product.ProductName}}</td>
-    <td>{{product.Category}}</td>
-    <td>{{product.Description}}</td>
-    <td>{{product.Price}}</td>
-    <td>{{product.Availability}}</td>
-</tr>
+<div class="container">
+<h2>Product List</h2>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+           Product Name
+            </th>
+            <th>
+              Category  
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price(Rs.)
+            </th>
+            <th>
+             Availability
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.ProductName}}</td>
+            <td>{{product.Category}}</td>
+            <td>{{product.Description}}</td>
+            <td>{{product.Price | currency:'INR'}}</td>
+            <td>
+                <span style="color:green" *ngIf="product.Availability">YES</span>
+                <span style="color:red" *ngIf="!product.Availability">NO</span>              
+            </td>
+        </tr>
+    </tbody>
+
 
 </table>
+</div>
+
+
+
+
+
