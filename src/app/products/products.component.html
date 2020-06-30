@@ -1,5 +1,7 @@
 <div class="container">
 <h2>Product List</h2>
+<div style="text-align:right"><button  class="btn btn-success" (click)="addProduct()">Add Product</button></div>
+
 <table class="table table-hover">
     <thead class="thead-dark">
         <tr>
@@ -18,6 +20,9 @@
             <th>
              Availability
             </th>
+            <th>
+
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -29,6 +34,10 @@
             <td>
                 <span style="color:green" *ngIf="product.Availability">YES</span>
                 <span style="color:red" *ngIf="!product.Availability">NO</span>              
+            </td>
+            <td>
+                <button class="btn btn-info" (click)="editProduct()">Edit</button>
+                <button class="btn btn-danger" (click)="deleteProduct()">Delete</button>
             </td>
         </tr>
     </tbody>
